@@ -71,15 +71,20 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 
 1. 根据官方给的安装方式pip install -U bigchaindb-driver安装驱动（首先要安装python3和pip）</br>
 ![avatar](/images/installation1.png)
+
 2. 利用sudo apt install mongodb安装mongodb</br>
 ![avatar](/images/installation2.png)
+
 3. 利用pip install flask安装flask</br>
 ![avatar](/images/installation3.png)
+
 4. 利用pip3 install bigchaindb安装bigchaindb</br>
 ![avatar](/images/installation4.png)
+
 5. 利用bigchaindb -y configure mongodb进行配置</br>
 ![avatar](/images/installation5_1.png)
 ![avatar](/images/installation5_2.png)
+
 6. 下载tendermint并安装</br>
 ![avatar](/images/installation6.png)</br>
 （bigchainDB基于tendermint开发，由于国内从GitHub下载项目速度很慢，所以示例通过第三方下载好后再解压安装）
@@ -91,18 +96,25 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 
 ## 使用方法 <a name="Usage"></a>
 ![avatar](/images/usage1.png)
+
 首页：</br>
 ![avatar](/images/usage2.png)
+
 学生端：</br>
 ![avatar](/images/usage3.png)
+
 注册：（返回公私钥）</br>
 ![avatar](/images/usage4.png)
+
 登陆：</br>
 ![avatar](/images/usage5.png)
+
 查询：</br>
 ![avatar](/images/usage6.png)
+
 部门端：发讲座票</br>
 ![avatar](/images/usage7.png)
+
 学生端接收到：</br>
 ![avatar](/images/usage8.png)
 
