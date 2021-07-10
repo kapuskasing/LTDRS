@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+   
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员端</title>
+    <!--CSS引入-->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="adminer.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- 网页头部 -->
+    <div class="header">
+        <a href="http://jw.scut.edu.cn/zhinan/cms/index.do">
+            <div class="logo_left"><img src="logo_left.png" alt=""></div>
+        </a>
+        <div class="logo_right"><img src="logo_right.jpg" alt=""></div>
+    </div>
+    <div>`</div>
+
+
+
+    <div class="w">
+        <h1>管理员端</h1>
+
+        <div class="left">
+            <br>
+            <br>
+        
+           <form>
+            <b style="height:100px;">有新活动申报：</b>
+            <br>
+            <!--input type="text" name="name">
+            <br><b style="height: 50px;">活动审核：</b><br-->
+            <br>学生部门名称：
+            <p id="departmentName"></p>
+            <br>活动名称：
+            <p id="activityName"></p>
+            <br>活动时间：
+            <p id="activityTime"></p>
+            <br>活动地点：
+            <p id="activityPlace"></p>
+            <br>活动类型：
+            <p id="activityType"></p>
+            <br>讲座票数：
+            <p id="ticketNumber"></p>
+
+
+
+
+            <br>审核情况：
+            <select>
+                <option value="agree">通过</option>
+                <option value="disagree">不通过</option>
+            </select>
+            <br>
+            <br>
+<!--            <input type="submit" value="提交" onclick="tijiao()">-->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!--input type="reset" value="重新填写"-->
+        </form>
+
+
+             <form name="form1" action="http://127.0.0.1:5000/adminer_check" method="post">
+        <br>   确认：
+<!--        <p id="departmentName"></p>-->
+<br>
+        <input type="text" name="departmentName"  placeholder="请在此输入学生部门名称"/>
+
+        申报讲座名称：
+        <br>
+        <input type="text" name="activityName"  placeholder="请在此输入活动名称"/><br>
+        <br>
+                 讲座时间：
+        <br>
+        <input type="text" name="activityTime"  placeholder="请在此输入活动时间"/><br>
+        讲座地点：
+        <br>
+        <input type="text" name="activityPlace"  placeholder="请在此输入活动地点"/><br>
+        讲座类型：
+        <br>
+        <input type="text" name="activityType"  placeholder="请在此输入活动类型"/><br>
+        活动所需讲座票票数量：
+        <br>
+        <input type="text" name="ticketNumber"  placeholder="请在此输入数量"/>
+        <br>
+        <br>
+        <input type="submit" value="提交项目">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="reset" value="重新填写">
+
+
+    </form>
+
+
+
+
+        </div>
+
+        <script>
+            function tijiao(){
+                console.log("value1:", value1)
+                 alert("value1:", value1);
+
+                 var f=document.createElement("form");
+                 var departmentName=document.createElement("input");
+                 var activityName=document.createElement("input");
+                 var activityTime=document.createElement("input");
+                 var activityPlace=document.createElement("input");
+                 var activityType=document.createElement("input");
+                 var ticketNumber=document.createElement("input");
+
+                 console.log("departmentName")
+
+                departmentName.value=value1;departmentName.name="departmentName";
+                 activityName.value=value2;activityName.name="activityName";
+                  activityTime.value=value3;activityTime.name="activityTime";
+                   activityPlace.value=value4;activityPlace.name="activityPlace";
+                    activityType.value=value5;activityType.name="activityType";
+                     ticketNumber.value=value6;ticketNumber.name="ticketNumber";
+
+// $.ajax({
+//      type: 'POST',
+//      url: 'http://127.0.0.1:5000/adminer_check' ,
+//     data: {departmentName:departmentName,activityName:activityName,activityTime:activityTime,activityPlace:activityPlace,activityType:activityType,ticketNumber:ticketNumber} ,
+//     success: function(){
+//             alert("success")
+//         console.log("success")
+//                 }
+// });
+
+
+    f.method="post";
+    f.action="http://127.0.0.1:5000/adminer_check";              //add our action
+    f.appendChild(departmentName);
+    f.appendChild(activityName);
+    f.appendChild(activityTime);
+     f.appendChild(activityPlace);
+      f.appendChild(activityType);
+       f.appendChild(ticketNumber);
+    document.body.appendChild(f);
+    f.submit();
+    document.body.removeChild(f);
+            }
+                   var value1 = localStorage["departmentName"];
+                   var value2 = localStorage["activityName"];
+                   var value3 = localStorage["activityTime"];
+                   var value4 = localStorage["activityPlace"];
+                   var value5 = localStorage["activityType"];
+                   var value6 = localStorage["ticketNumber"];
+
+                   document.getElementById("departmentName").innerHTML=value1;
+                   document.getElementById("activityName").innerHTML=value2;
+                   document.getElementById("activityTime").innerHTML=value3;
+                   document.getElementById("activityPlace").innerHTML=value4;
+                   document.getElementById("activityType").innerHTML=value5;
+                   document.getElementById("ticketNumber").innerHTML=value6;
+        </script>
+
+
+        <div class="right">
+            <br><br>
+
+        <form action="http://127.0.0.1:5000/adminerResult">
+            <b style="height:100px;">查询学生讲座票信息：</b><br> <br>
+            <input type="text" name="studentNmuber" placeholder="请再次输入学生学号">&nbsp;&nbsp;<br> <br>
+            <input type="submit" value="提交">
+            <br><br>
+            <input type="submit" value="查询学生讲座票信息">
+            <br><br>
+            <!--input type="reset" value="重新填写"-->
+
+        </form>
+        </div>
+        
+
+    </div>
+
+
+    <!-- 网页底部 -->
+    <div class="footer">
+        <div class="img_left">
+            <img src="footer_icon_logo.png" alt="">
+        </div>
+        <span class="line"></span>
+
+        <div class="img_right">
+            <img src="code_icon.jpg" alt="">
+            <p>华工教务公众号</p>
+        </div>
+    </div>
+    <div class="end">制作者：何裕明、李炫志、苏坤明、王金凌</div>
+</body>
+
+</html>
