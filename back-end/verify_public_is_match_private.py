@@ -1,3 +1,4 @@
+# 检查公私钥是否匹配
 from collections import namedtuple
 
 try:

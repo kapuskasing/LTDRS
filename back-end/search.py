@@ -28,5 +28,4 @@ def search(student_id):   #  查找某个学生的讲座票，参数为学号，
         }
         result.append(result_t)  # 加入到结果中
 
-    # print(result)
     return result
