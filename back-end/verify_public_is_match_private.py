@@ -88,9 +88,3 @@ def verify_public_is_match_private(public_key, private_key):
         else:
             print("fail")
             return 0
-
-
-# private_key_test="FusYU4acqLtDA1AuidiVBVThBbG6xEgkKNcFPDnxfKo6"
-# public_key_test = '6CAk9Ghik92tss6UCGV5kdKiCWkfPXimowxy58msxTiv'
-# test_result = verify_public_is_match_private(public_key_test, private_key_test)
-# print(test_result)

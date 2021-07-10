@@ -10,7 +10,7 @@ def regester(student_id):
     t = bdb.assets.get(search=str(student_id))#查看该学号是否已经注册过
 
     if(len(t)!=0):
-        return [];
+        return []
 
     # 产生一个key对
     temp_key = generate_keypair()
