@@ -120,4 +120,4 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 
 
 ## License <a name="License"></a>
-[MIT](LICENSE)
+[MIT](../LICENSE)
