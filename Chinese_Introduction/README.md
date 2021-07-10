@@ -42,16 +42,21 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 
 ## 应用场景  <a name="Scenarios"></a>
 本系统我们设计了三种不同的用户：管理员、学生部门与学生。下面我们来看一个简单的应用例子：
-（1）假设软件学院新成立一个学习部，部长需要在学生部门端注册部门名字，并获得唯一的一对密钥，该部长可以通过这对密钥登录。登陆成功后部长可以填写一份活动申请表单提交给学校管理员审核。如：
- 1.活动名：一对一帮扶学习
-2.活动时间：2020.6.28-2020.8.1
-3.活动地点：大学城校区A1教学楼
-4.活动票数目：300
+   
+   （1）假设软件学院新成立一个学习部，部长需要在学生部门端注册部门名字，并获得唯一的一对密钥，该部长可以通过这对密钥登录。登陆成功后部长可以填写一份活动申请表单提交给学校管理员审核。如：
+```
+活动名：一对一帮扶学习
+活动时间：2020.6.28-2020.8.1
+活动地点：大学城校区A1教学楼
+活动票数目：300
+```
 该表单信息在链内独一无二，杜绝了重复创建无效活动的可能性。若审核通过，则该部门账号获得了管理员创建的讲座票资产。
 此后，开展活动的时候，部门工作人员可以收集参加活动学生的学号从而在部门账号登记，同时部门账号也在输出里面添加了附加条件：当需要转移这些资产的时候，需要部门账号的密码签名，从而杜绝了讲座票交易的可能性。此时已经讲座票转移给学生。
-（2）管理员端会给管理员一个默认账号，登录后可以查看部门端的活动申报情况，选择不通过驳回修改或者通过活动。若通过活动，同时也创建了带有相应信息的资产，并转移给对应部门。此外，管理员也可以将活动信息发布出去，活动信息链接可以显示在学生端以供学生点击查看。
+
+   （2）管理员端会给管理员一个默认账号，登录后可以查看部门端的活动申报情况，选择不通过驳回修改或者通过活动。若通过活动，同时也创建了带有相应信息的资产，并转移给对应部门。此外，管理员也可以将活动信息发布出去，活动信息链接可以显示在学生端以供学生点击查看。
 此外，管理员还拥有最后统计综测讲座票数目的权限，即可以查询所有学生所拥有的合法讲座票，或者通过学号查询特定学生所拥有的合法讲座票。
-（3）学生在入学时可以使用自己的学号在学生端注册页面注册获得自己的账号（即公私密钥对），此后学生可以通过这对密钥登录自己的账号。
+
+   （3）学生在入学时可以使用自己的学号在学生端注册页面注册获得自己的账号（即公私密钥对），此后学生可以通过这对密钥登录自己的账号。
 登录账号后学生可以通过输入学号查询到自己所拥有的讲座票。当然，讲座票数目作为可以公开的信息，学生也可以通过输入其他人的学号查询其他人的讲座票信息，但我们没有开放查询所有学生信息的端口。
 
 ## 安装配置 <a name="Installation"></a>
@@ -64,40 +69,41 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 安装环境：Ubuntu18.04、python version>=3.4.2。
 安装bigchaindb数据库以及python所需的驱动包bigchaindb-driver，并根据驱动编程。具体如下：
 
-1. 根据官方给的安装方式pip install -U bigchaindb-driver安装驱动（首先要安装python3和pip）
+1. 根据官方给的安装方式pip install -U bigchaindb-driver安装驱动（首先要安装python3和pip）</br>
 ![avatar](/images/installation1.png)
-1. 利用sudo apt install mongodb安装mongodb
+2. 利用sudo apt install mongodb安装mongodb</br>
 ![avatar](/images/installation2.png)
-3. 利用pip install flask安装flask
+3. 利用pip install flask安装flask</br>
 ![avatar](/images/installation3.png)
-4. 利用pip3 install bigchaindb安装bigchaindb
+4. 利用pip3 install bigchaindb安装bigchaindb</br>
 ![avatar](/images/installation4.png)
-5. 利用bigchaindb -y configure mongodb进行配置
+5. 利用bigchaindb -y configure mongodb进行配置</br>
 ![avatar](/images/installation5_1.png)
 ![avatar](/images/installation5_2.png)
-6. 下载tendermint并安装
+6. 下载tendermint并安装</br>
 ![avatar](/images/installation6.png)</br>
 （bigchainDB基于tendermint开发，由于国内从GitHub下载项目速度很慢，所以示例通过第三方下载好后再解压安装）
 
-7. 开启bigchainbd服务
+7. 开启bigchainbd服务</br>
 ![avatar](/images/installation7.png)
+
 8. 运行部署服务端代码
 
 ## 使用方法 <a name="Usage"></a>
 ![avatar](/images/usage1.png)
-首页：
+首页：</br>
 ![avatar](/images/usage2.png)
-学生端：
+学生端：</br>
 ![avatar](/images/usage3.png)
-注册：（返回公私钥）
+注册：（返回公私钥）</br>
 ![avatar](/images/usage4.png)
-登陆：
+登陆：</br>
 ![avatar](/images/usage5.png)
-查询：
+查询：</br>
 ![avatar](/images/usage6.png)
-部门端：发讲座票
+部门端：发讲座票</br>
 ![avatar](/images/usage7.png)
-学生端接收到：
+学生端接收到：</br>
 ![avatar](/images/usage8.png)
 
 
