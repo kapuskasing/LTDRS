@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+ 
+</head>
+<body>
+    <input type="text" name="activityName" />
+    <input type="text" name="ticketNumber" />
+    <input type="button" name="" value="post" onclick="set()"/>
+   <script>
+        function set(){
+            //由于是一个新的技术，你可以通过下面的代码检测你的浏览器是否支持
+           if (window.localStorage) {
+                //存储变量的值
+               localStorage.activityName = document.all.activityName.value;
+               localStorage.ticketNumber = document.all.ticketNumber.value;
+               alert("创建成功")
+                //location.href = 'test2.html';
+           } else {
+               alert("NOT SUPPORT");
+            }
+        }
+
+   </script>
+</body>
+</html>
