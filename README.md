@@ -12,6 +12,7 @@ Chinese version of introduction, please refer to [中文介绍](./Chinese_Introd
 - [Application Scenarios](#Scenarios)
 - [Installation](#Installation)
 - [Usage](#Usage)
+- [Members](#Members)
 - [License](#License)
 
 ## Introduction <a name="Introduction"></a>
@@ -118,6 +119,11 @@ The department side: distribution of lecture tickets</br>
 
 Student side receives:</br>
 ![avatar](/images/usage8.png)
+
+## Project Members <a name="Members"></a>
+
+- [Xavi](https://github.com/HeXavi8) - **Xavi He** &lt; 825308876@qq.com&gt; (he/him)
+- [kapuskasing](https://github.com/kapuskasing) - **Kapuskasing Su** &lt; 1243038585@qq.com&gt; (he/him)
 
 ## License <a name="License"></a>
 [MIT](./LICENSE)

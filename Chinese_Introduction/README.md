@@ -9,6 +9,7 @@
 - [应用场景](#Scenarios)
 - [安装配置](#Installation)
 - [使用方法](#Usage)
+- [项目成员](#Members)
 - [License](#License)
 
 ## 项目介绍 <a name="Introduction"></a>
@@ -118,6 +119,10 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 学生端接收到：</br>
 ![avatar](/images/usage8.png)
 
+## 项目成员 <a name="Members"></a>
+
+- [Xavi](https://github.com/HeXavi8) - **Xavi He** &lt; 825308876@qq.com&gt; (he/him)
+- [kapuskasing](https://github.com/kapuskasing) - **Kapuskasing Su** &lt; 1243038585@qq.com&gt; (he/him)
 
 ## License <a name="License"></a>
 [MIT](../LICENSE)
