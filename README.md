@@ -39,7 +39,7 @@ Therefore, we hope to develop a program to provide an immutable, secure and reli
 4. Create lecture tickets: the department will apply for lecture tickets from the school, provide the information of lecture tickets and the required quantity, and the school will have the ability to approve the application and create lecture tickets for the department.
 
 
-## application scenario  <a name="Scenarios"></a>
+## Application Scenario  <a name="Scenarios"></a>
 In this system, we have designed three different users: administrators, student departments and students. Let's look at a simple example:
 
 (1) Suppose that a new learning department is set up in the School of Software. The minister needs to register the name of the department in the student department and obtain a unique pair of keys through which the minister can log in. After logging in successfully, the minister can fill in an application form and submit it to the school administrator for review. Such as:
