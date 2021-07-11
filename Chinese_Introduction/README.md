@@ -1,5 +1,5 @@
 # LTDRS（Lecture Ticket Distribution & Record System）
-基于bigchainDB的讲座票分发记录系统
+基于BigchainDB的讲座票分发记录系统
 
 ## 目录
 - [项目介绍](#Introduction)
@@ -9,10 +9,11 @@
 - [应用场景](#Scenarios)
 - [安装配置](#Installation)
 - [使用方法](#Usage)
+- [项目成员](#Members)
 - [License](#License)
 
 ## 项目介绍 <a name="Introduction"></a>
-这是一款基于bigchainDB的讲座票分发记录系统，主要利用了bigchainDB分布式数据库和传统区块链的主要优点，使得在该系统的每一张发放的讲座票与对应的人都有所记录，保证了讲座票分发过程的效率与公平性。
+这是一款基于BigchainDB的讲座票分发记录系统，主要利用了BigchainDB分布式数据库和传统区块链的主要优点，使得在该系统的每一张发放的讲座票与对应的人都有所记录，保证了讲座票分发过程的效率与公平性。
 
 ## 技术背景 <a name="Background"></a>
 BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区块链的主要优点组合在一起，是一个具有区块链属性（例如，去中心化，不变性，自治性）和数据库属性（例如，高事务处理率，低延迟，结构化数据的索引和查询）的软件。对比起传统的单机数据库服务器，BigchainDB数据库能够更好的解决由于规模增大而导致的增加、删除、修改、查询的效率问题；而对比起传统的区块链，BigchainDB真正做到了“去中心化“。总而言之，该数据库（2.0版本）主要的特殊功能包括去中心化，拜占庭容错，不可篡改，自治性，低延迟以及结构化数据索引和查询。</br>
@@ -60,16 +61,16 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 登录账号后学生可以通过输入学号查询到自己所拥有的讲座票。当然，讲座票数目作为可以公开的信息，学生也可以通过输入其他人的学号查询其他人的讲座票信息，但我们没有开放查询所有学生信息的端口。
 
 ## 安装配置 <a name="Installation"></a>
-我们使用了ubuntu18.04的iso内跑前后端系统，在bigchaindb、MongoDB、Terminate Node的运行下，使用flask框架下的pycharm生成可视化界面进行操作。
+我们使用了ubuntu18.04的iso内跑前后端系统，在BigchainDB、MongoDB、Terminate Node的运行下，使用flask框架下的pycharm生成可视化界面进行操作。
 
 * 客户端：使用浏览器打开网页按照提示即可使用
 ![avatar](/images/module.png)
 * 服务端：
 
 安装环境：Ubuntu18.04、python version>=3.4.2。
-安装bigchaindb数据库以及python所需的驱动包bigchaindb-driver，并根据驱动编程。具体如下：
+安装BigchainDB数据库以及python所需的驱动包BigchainDB-driver，并根据驱动编程。具体如下：
 
-1. 根据官方给的安装方式pip install -U bigchaindb-driver安装驱动（首先要安装python3和pip）</br>
+1. 根据官方给的安装方式pip install -U BigchainDB-driver安装驱动（首先要安装python3和pip）</br>
 ![avatar](/images/installation1.png)
 
 2. 利用sudo apt install mongodb安装mongodb</br>
@@ -78,16 +79,16 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 3. 利用pip install flask安装flask</br>
 ![avatar](/images/installation3.png)
 
-4. 利用pip3 install bigchaindb安装bigchaindb</br>
+4. 利用pip3 install BigchainDB安装BigchainDB</br>
 ![avatar](/images/installation4.png)
 
-5. 利用bigchaindb -y configure mongodb进行配置</br>
+5. 利用BigchainDB -y configure mongodb进行配置</br>
 ![avatar](/images/installation5_1.png)
 ![avatar](/images/installation5_2.png)
 
 6. 下载tendermint并安装</br>
 ![avatar](/images/installation6.png)</br>
-（bigchainDB基于tendermint开发，由于国内从GitHub下载项目速度很慢，所以示例通过第三方下载好后再解压安装）
+（BigchainDB基于Tendermint开发，由于国内从GitHub下载项目速度很慢，所以示例通过第三方下载好后再解压安装）
 
 7. 开启bigchainbd服务</br>
 ![avatar](/images/installation7.png)
@@ -118,6 +119,10 @@ BigchainDB，中文名为巨链数据库，它将分布式数据库和传统区�
 学生端接收到：</br>
 ![avatar](/images/usage8.png)
 
+## 项目成员 <a name="Members"></a>
+
+- [Xavi](https://github.com/HeXavi8) - **Xavi He** &lt; 825308876@qq.com&gt; (he/him)
+- [kapuskasing](https://github.com/kapuskasing) - **Kapuskasing Su** &lt; 1243038585@qq.com&gt; (he/him)
 
 ## License <a name="License"></a>
 [MIT](../LICENSE)
