@@ -1,3 +1,4 @@
+### [English](https://github.com/kapuskasing/LTDRS) | 中文
 # LTDRS（Lecture Ticket Distribution & Record System）
 基于BigchainDB的讲座票分发记录系统
 
